@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://br2whanyoja5c"]
 
 [ext_resource type="PackedScene" uid="uid://nlmxldaeh4ft" path="res://Scenes/player.tscn" id="1_5cjrv"]
-[ext_resource type="Script" uid="uid://cpny1ihsnh5k4" path="res://Scenes/menu.gd" id="2_j0p05"]
+[ext_resource type="PackedScene" uid="uid://b62pvxyuww225" path="res://Scenes/Menu/menu.tscn" id="2_j0p05"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_j0p05"]
 
@@ -25,18 +25,4 @@ shape = SubResource("RectangleShape2D_5cjrv")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="Menu" type="Node2D" parent="."]
-script = ExtResource("2_j0p05")
-
-[node name="BgFlash2" type="Polygon2D" parent="Menu"]
-position = Vector2(-792, 561)
-rotation = -1.5707964
-scale = Vector2(19.17, 19.17)
-polygon = PackedVector2Array(0, 20, 13.053, 99.144, 5.176, 19.319, 10.993294, 32.16391, 38.268, 92.388, 10, 17.321, 60.876, 79.335, 14.142, 14.142, 79.335, 60.876, 17.321, 10, 92.388, 38.268, 19.319, 5.176, 99.144, 13.053, 20, 0, 0, 0)
-
-[node name="BgFlash" type="Polygon2D" parent="Menu"]
-position = Vector2(-872.99994, 713)
-rotation = -1.5707964
-scale = Vector2(29.145, 29.145)
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(0, 20, 13.053, 99.144, 5.176, 19.319, 38.268, 92.388, 10, 17.321, 60.876, 79.335, 14.142, 14.142, 79.335, 60.876, 17.321, 10, 92.388, 38.268, 19.319, 5.176, 99.144, 13.053, 20, 0, 0, 0)
+[node name="Menu" parent="." instance=ExtResource("2_j0p05")]

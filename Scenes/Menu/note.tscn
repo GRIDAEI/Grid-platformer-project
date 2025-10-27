@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5i8cn7fsbulb"]
+
+[ext_resource type="FontFile" uid="uid://1fpgdwnphh8d" path="res://Assets/Fonts/Mister Pixel Regular.otf" id="1_p3y6w"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gjpho"]
+font = ExtResource("1_p3y6w")
+font_size = 133
+font_color = Color(0, 0, 0, 1)
+
+[node name="Note" type="Polygon2D"]
+scale = Vector2(1, 0.61256534)
+color = Color(0.6052743, 0.6052743, 0.6052743, 1)
+polygon = PackedVector2Array(-153, 63, -135, 98, -169, 108, -151, 116, -150, 125, -156, 132, -150, 148, -155, 162, -165, 179, -170, 195, -165, 203, -158, 218, -139, 231, -166, 253, 533, 253, 576, 63, 201.94458, 62.99997)
+
+[node name="Foreground" type="Polygon2D" parent="."]
+position = Vector2(-4, 5.86322)
+scale = Vector2(0.9451193, 0.94511926)
+polygon = PackedVector2Array(-153, 63, -135.43265, 96.727264, -168.23273, 105.36365, -162.94238, 114, -155.53592, 117.45456, -156, 132, -154.47784, 150.27274, -158.71011, 162.36365, -160.82626, 172.7273, -158.71011, 191.7273, -170.34885, 209, -159.76819, 217.63638, -141.78104, 236.63638, -161.88431, 253.90912, 533, 253, 576, 63, 201.94458, 62.99997)
+
+[node name="Text" type="Label" parent="."]
+offset_left = -109.0
+offset_top = 97.28202
+offset_right = 391.0
+offset_bottom = 244.20514
+text = "Continue"
+label_settings = SubResource("LabelSettings_gjpho")
