@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://br2whanyoja5c"]
+[gd_scene load_steps=5 format=3 uid="uid://br2whanyoja5c"]
 
 [ext_resource type="PackedScene" uid="uid://nlmxldaeh4ft" path="res://Scenes/player.tscn" id="1_5cjrv"]
+[ext_resource type="PackedScene" uid="uid://b62pvxyuww225" path="res://Scenes/Menu/menu.tscn" id="2_j0p05"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_j0p05"]
 
@@ -23,3 +24,5 @@ position = Vector2(0, 76)
 shape = SubResource("RectangleShape2D_5cjrv")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Menu" parent="." instance=ExtResource("2_j0p05")]
