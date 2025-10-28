@@ -32,11 +32,11 @@ func _process(delta: float) -> void:
 			$AnimationPlayer.play("Menu_This")
 			change = true
 
-		if(Input.is_action_just_pressed("ui_up") and not change):
+		if((Input.is_action_pressed("ui_up") or Input.is_action_pressed("ui_left")) and not change):
 			$AnimationPlayer.play("Menu_Next")
 			change = true
 			index+=1
-		if(Input.is_action_just_pressed("ui_down") and not change):
+		if((Input.is_action_pressed("ui_down") or Input.is_action_pressed("ui_right")) and not change):
 			$AnimationPlayer.play("Menu_Prev")
 			change = true
 			index-=1
