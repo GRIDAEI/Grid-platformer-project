@@ -1,5 +1,5 @@
 extends Node
-
+class_name game_manager
 # This script has objects and functions that are related to the core of the game
 # or otherwise commonly used objects like Player
 

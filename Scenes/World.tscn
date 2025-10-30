@@ -1,16 +1,32 @@
-[gd_scene load_steps=5 format=3 uid="uid://br2whanyoja5c"]
+[gd_scene load_steps=7 format=3 uid="uid://br2whanyoja5c"]
 
 [ext_resource type="PackedScene" uid="uid://nlmxldaeh4ft" path="res://Scenes/player.tscn" id="1_5cjrv"]
 [ext_resource type="PackedScene" uid="uid://b62pvxyuww225" path="res://Scenes/Menu/menu.tscn" id="2_j0p05"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_5nsto"]
+size = Vector2(40, 100)
 
 [sub_resource type="QuadMesh" id="QuadMesh_j0p05"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5cjrv"]
 size = Vector2(610, 22)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j0p05"]
+size = Vector2(36, 386)
+
 [node name="TestLevel" type="Node2D"]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_5cjrv")]
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="."]
+position = Vector2(282, -63)
+scale = Vector2(1, 4.6667094)
+mesh = SubResource("QuadMesh_5nsto")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="."]
+position = Vector2(-288, -60)
+scale = Vector2(1, 3.040001)
+mesh = SubResource("QuadMesh_5nsto")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
 position = Vector2(1, 76)
@@ -22,6 +38,14 @@ mesh = SubResource("QuadMesh_j0p05")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(0, 76)
 shape = SubResource("RectangleShape2D_5cjrv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-286, -47)
+shape = SubResource("RectangleShape2D_j0p05")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(280, -107)
+shape = SubResource("RectangleShape2D_j0p05")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
