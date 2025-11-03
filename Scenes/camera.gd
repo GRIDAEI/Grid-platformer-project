@@ -2,6 +2,7 @@ extends Camera2D
 
 @export var BoundingPoint1: Vector2 = Vector2(0,0)
 @export var BoundingPoint2: Vector2 = Vector2(0,0)
+@export var speed: float = 1.0
 var vel
 
 func _ready() -> void:
@@ -12,7 +13,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	vel = GameManager.player.position - position
 	
-	position += vel * delta
+	position += vel * delta * speed
 	if(position.min(BoundingPoint1) != BoundingPoint1):
 		position = position.max(BoundingPoint1)
 	if(position.max(BoundingPoint1) != BoundingPoint2):
