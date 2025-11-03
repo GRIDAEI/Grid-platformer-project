@@ -44,6 +44,7 @@ var current_speed : float = 0.0
 
 var was_wall_jump : bool = false
 
+
 func _physics_process(delta: float) -> void:
 	
 	#Pobierz input

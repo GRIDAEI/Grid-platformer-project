@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=4 uid="uid://br2whanyoja5c"]
+[gd_scene load_steps=13 format=4 uid="uid://br2whanyoja5c"]
 
 [ext_resource type="PackedScene" uid="uid://nlmxldaeh4ft" path="res://Scenes/player.tscn" id="1_5cjrv"]
 [ext_resource type="PackedScene" uid="uid://b62pvxyuww225" path="res://Scenes/Menu/menu.tscn" id="2_j0p05"]
 [ext_resource type="Texture2D" uid="uid://csjdn5401fu8d" path="res://Assets/Sprites/Central City - Anokolisa/Assets/Tiles.png" id="3_5nsto"]
 [ext_resource type="Texture2D" uid="uid://bbot1j54hjcep" path="res://Assets/Sprites/Central City - Anokolisa/Assets/Props-01.png" id="3_p70al"]
 [ext_resource type="Texture2D" uid="uid://dixlr18vcsycm" path="res://Assets/Sprites/Central City - Anokolisa/Assets/Buildings.png" id="4_45d1s"]
+[ext_resource type="Script" uid="uid://f64o8qyq7t0x" path="res://Scenes/camera.gd" id="5_45d1s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gjpho"]
 texture = ExtResource("3_5nsto")
@@ -541,5 +542,6 @@ tile_set = SubResource("TileSet_q2d71")
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_5cjrv")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("5_45d1s")
 
 [node name="Menu" parent="Camera2D" instance=ExtResource("2_j0p05")]
