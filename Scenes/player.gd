@@ -55,6 +55,7 @@ var current_speed : float = 0.0
 var was_on_floor : bool = false
 var was_on_wall : bool = false
 var was_wall_jump : bool = false
+var jump_boost_active : bool = false
 
 var has_jumped : bool = false
 var jump_boost_active : bool = false
