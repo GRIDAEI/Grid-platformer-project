@@ -293,4 +293,3 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_pu2lt")
 animation = &"wall_slide"
 autoplay = "default"
-frame_progress = 1.0
