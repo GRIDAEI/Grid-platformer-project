@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c3xrsgui4y0wr" path="res://Assets/Sprites/player/player wall slide (left) 48x48.png" id="6_x3wgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
-size = Vector2(24, 63)
+size = Vector2(24, 59)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
 atlas = ExtResource("2_cvnsp")
@@ -282,10 +282,12 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 129
+collision_mask = 129
 script = ExtResource("1_cvnsp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -1.5)
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_cvnsp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
