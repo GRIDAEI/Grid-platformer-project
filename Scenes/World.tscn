@@ -1,11 +1,14 @@
-[gd_scene load_steps=13 format=4 uid="uid://br2whanyoja5c"]
+[gd_scene load_steps=16 format=4 uid="uid://br2whanyoja5c"]
 
 [ext_resource type="PackedScene" uid="uid://nlmxldaeh4ft" path="res://Scenes/player.tscn" id="1_5cjrv"]
 [ext_resource type="PackedScene" uid="uid://b62pvxyuww225" path="res://Scenes/Menu/menu.tscn" id="2_j0p05"]
 [ext_resource type="Texture2D" uid="uid://csjdn5401fu8d" path="res://Assets/Sprites/Central City - Anokolisa/Assets/Tiles.png" id="3_5nsto"]
 [ext_resource type="Texture2D" uid="uid://bbot1j54hjcep" path="res://Assets/Sprites/Central City - Anokolisa/Assets/Props-01.png" id="3_p70al"]
 [ext_resource type="Texture2D" uid="uid://dixlr18vcsycm" path="res://Assets/Sprites/Central City - Anokolisa/Assets/Buildings.png" id="4_45d1s"]
-[ext_resource type="Script" uid="uid://f64o8qyq7t0x" path="res://Scenes/camera.gd" id="5_45d1s"]
+[ext_resource type="PackedScene" uid="uid://b4snkql3yoohm" path="res://Scenes/Items/currency.tscn" id="4_y7y61"]
+[ext_resource type="Script" uid="uid://f64o8qyq7t0x" path="res://Scripts/camera.gd" id="5_45d1s"]
+[ext_resource type="Texture2D" uid="uid://cedspgqa4qh7" path="res://Assets/Sprites/Items/currency.png" id="7_q2d71"]
+[ext_resource type="Script" uid="uid://1uxu0ikvsfme" path="res://Scripts/Player/currency_counter.gd" id="7_uo7di"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gjpho"]
 texture = ExtResource("3_5nsto")
@@ -539,11 +542,57 @@ tile_set = SubResource("TileSet_kn06e")
 tile_map_data = PackedByteArray("AAAHAAkAAAAHAAYAAAAFAAkAAAAFAAYAAAAEAAoAAAADAAIAAAAEAAsAAAADAAMAAAAFAAoAAAAEAAIAAAAFAAsAAAAEAAMAAAAGAAoAAAAFAAIAAAAGAAsAAAAFAAMAAAAHAAoAAAAGAAIAAAAHAAsAAAAGAAMAAAAEAAkAAAAHAAYAAAAGAAkAAAAGAAYAAAD9/woAAAADAAQAAAD9/wsAAAADAAUAAAD+/woAAAAEAAQAAAD+/wsAAAAEAAUAAAD//woAAAAFAAQAAAD//wsAAAAFAAUAAAAAAAoAAAAGAAQAAAAAAAsAAAAGAAUAAAD2/woAAAADAAQAAAD2/wsAAAADAAUAAAD3/woAAAAEAAQAAAD3/wsAAAAEAAUAAAD4/woAAAAFAAQAAAD4/wsAAAAFAAUAAAD5/woAAAAGAAQAAAD5/wsAAAAGAAUAAAAAAAkAAAAHAAYAAAD9/wkAAAAHAAYAAAD5/wkAAAAHAAYAAAD2/wkAAAAHAAYAAAD+/wkAAAAFAAYAAAD//wkAAAAGAAYAAAD3/wkAAAAFAAYAAAD4/wkAAAAGAAYAAADm/wgAAAAFAAcAAADm/wkAAAAFAAgAAADm/woAAAAFAAkAAADm/wsAAAAFAAoAAADn/wgAAAAGAAcAAADn/wkAAAAGAAgAAADn/woAAAAGAAkAAADn/wsAAAAGAAoAAADn/wcAAAAGAAYAAADm/wcAAAAFAAYAAAAEAAQAAAAAAAIAAAAEAAUAAAAAAAMAAAAEAAYAAAAAAAQAAAAFAAQAAAABAAIAAAAFAAUAAAABAAMAAAAFAAYAAAABAAQAAAAGAAYAAAACAAQAAAAdAAsAAAACAAIAAAAdAAwAAAACAAMAAAAfAAsAAAACAAIAAAAfAAwAAAACAAMAAADm/wIAAAAAAAYAAADm/wMAAAAAAAcAAADm/wQAAAAAAAgAAADn/wIAAAABAAYAAADn/wMAAAABAAcAAADn/wQAAAABAAgAAADo/wEAAAACAAUAAADo/wIAAAACAAYAAADo/wMAAAACAAcAAADo/wQAAAACAAgAAADk/wMAAAADAAAAAADk/wQAAAADAAEAAADl/wMAAAAEAAAAAADl/wQAAAAEAAEAAADp/wQAAAACAAQAAAD4/wMAAAABAAEAAAD3/wIAAAAAAAAAAAD3/wMAAAAAAAEAAAD4/wIAAAABAAAAAAD5/wIAAAACAAAAAAD5/wMAAAACAAEAAAD6/wIAAAAAAAAAAAD6/wMAAAAAAAEAAAD7/wIAAAABAAAAAAD7/wMAAAABAAEAAAD8/wIAAAACAAAAAAD8/wMAAAACAAEAAADu/w4AAAAAAAAAAADu/w8AAAAAAAEAAADv/w4AAAABAAAAAADv/w8AAAABAAEAAADw/w4AAAACAAAAAADw/w8AAAACAAEAAADz/w4AAAAAAAAAAADz/w8AAAAAAAEAAAD0/w4AAAABAAAAAAD0/w8AAAABAAEAAAD1/w4AAAACAAAAAAD1/w8AAAACAAEAAAD6/w4AAAAAAAAAAAD6/w8AAAAAAAEAAAD7/w4AAAABAAAAAAD7/w8AAAABAAEAAAD8/w4AAAACAAAAAAD8/w8AAAACAAEAAAALAA4AAAAAAAAAAAALAA8AAAAAAAEAAAAMAA4AAAABAAAAAAAMAA8AAAABAAEAAAANAA4AAAACAAAAAAANAA8AAAACAAEAAAASAA4AAAAAAAAAAAASAA8AAAAAAAEAAAATAA4AAAABAAAAAAATAA8AAAABAAEAAAAUAA4AAAACAAAAAAAUAA8AAAACAAEAAAADAA8AAAAFAAAAAAADAAYAAAAFAAAAAAASAAgAAAAFAAAAAADe/wsAAAAAAAsAAADe/wwAAAAAAAoAAADe/w0AAAAAAAoAAADe/w4AAAAAAAwAAADe/w8AAAAAAA0AAADf/wgAAAABAAkAAADg/wgAAAACAAkAAADh/wgAAAADAAkAAADe/wgAAAAAAAkAAADe/wkAAAAAAAoAAADe/woAAAAAAAoAAAAcAAgAAAAAAAkAAAAcAAkAAAAAAAoAAAAcAAoAAAAAAAsAAAAcAAsAAAAAAAwAAAAcAAwAAAAAAA0AAAAdAAgAAAABAAsAAAAeAAgAAAACAAsAAAAhAAsAAAAFAAsAAAAhAAwAAAAFAAwAAAAiAAsAAAAGAAsAAAAiAAwAAAAGAAwAAAAjAAsAAAAHAAsAAAAjAAwAAAAHAAwAAAA=")
 tile_set = SubResource("TileSet_q2d71")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_5cjrv")]
+[node name="Player" parent="." instance=ExtResource("1_5cjrv")]
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera" type="Camera2D" parent="."]
 script = ExtResource("5_45d1s")
 BoundingPoint1 = Vector2(3200, 0)
 speed = 3.0
 
-[node name="Menu" parent="Camera2D" instance=ExtResource("2_j0p05")]
+[node name="Menu" parent="Camera" instance=ExtResource("2_j0p05")]
+
+[node name="UI" type="Control" parent="Camera"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CurrencyCounter" type="Control" parent="Camera/UI"]
+anchors_preset = 0
+offset_left = -557.0
+offset_top = -302.0
+offset_right = -517.0
+offset_bottom = -262.0
+script = ExtResource("7_uo7di")
+
+[node name="CurrencySprite" type="Sprite2D" parent="Camera/UI/CurrencyCounter"]
+scale = Vector2(2, 2)
+texture = ExtResource("7_q2d71")
+
+[node name="Counter" type="Label" parent="Camera/UI/CurrencyCounter"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = -11.0
+offset_right = 63.0
+offset_bottom = 12.0
+text = "0"
+
+[node name="Currency" type="Node2D" parent="."]
+
+[node name="Currency" parent="Currency" instance=ExtResource("4_y7y61")]
+position = Vector2(-97, 28)
+
+[node name="Currency2" parent="Currency" instance=ExtResource("4_y7y61")]
+position = Vector2(68, 71)
+
+[node name="Currency3" parent="Currency" instance=ExtResource("4_y7y61")]
+position = Vector2(261, 108)
+
+[node name="Currency4" parent="Currency" instance=ExtResource("4_y7y61")]
+position = Vector2(-414, 50)
+
+[node name="Currency5" parent="Currency" instance=ExtResource("4_y7y61")]
+position = Vector2(-226, -183)
+
+[node name="Currency6" parent="Currency" instance=ExtResource("4_y7y61")]
+position = Vector2(-480, -156)

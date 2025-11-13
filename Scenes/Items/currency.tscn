@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4snkql3yoohm"]
+
+[ext_resource type="Texture2D" uid="uid://cedspgqa4qh7" path="res://Assets/Sprites/Items/currency.png" id="1_1qb6n"]
+[ext_resource type="Script" uid="uid://bm5gi6u43vrdc" path="res://Scripts/Items/currency.gd" id="1_6ldys"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6ldys"]
+radius = 17.029387
+
+[node name="Currency" type="Area2D" groups=["currency"]]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_6ldys")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6ldys")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_1qb6n")
+
+[node name="Sfx" type="AudioStreamPlayer2D" parent="."]
+
+[node name="QueueFreeTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="QueueFreeTimer" to="." method="_on_queue_free_timer_timeout"]
