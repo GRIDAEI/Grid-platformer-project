@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=4 uid="uid://d3153evxoe0jw"]
 
 [ext_resource type="Texture2D" uid="uid://csjdn5401fu8d" path="res://Assets/Sprites/Central City - Anokolisa/Assets/Tiles.png" id="1_peptx"]
-[ext_resource type="Script" uid="uid://f64o8qyq7t0x" path="res://Scenes/camera.gd" id="2_rsv82"]
+[ext_resource type="Script" uid="uid://f64o8qyq7t0x" path="res://Scripts/camera.gd" id="2_rsv82"]
 [ext_resource type="PackedScene" uid="uid://b62pvxyuww225" path="res://Scenes/Menu/menu.tscn" id="3_8j7el"]
 [ext_resource type="PackedScene" uid="uid://nlmxldaeh4ft" path="res://Scenes/player.tscn" id="5_fh68y"]
 

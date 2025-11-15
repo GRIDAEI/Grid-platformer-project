@@ -11,9 +11,8 @@ func _on_being_collected(area: Area2D) -> void:
 	if area == self:
 		$CollisionShape2D.call_deferred("set_disabled", true)
 		$Sprite2D.visible = false
-		$QueueFreeTimer.start()
 		$Sfx.play()
 
 
-func _on_queue_free_timer_timeout() -> void:
+func _on_sfx_finished() -> void:
 	queue_free()
