@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://dubo02b4tjrlr" path="res://Scripts/Player/currency_collector.gd" id="7_3smsa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
-size = Vector2(24, 63)
+size = Vector2(24, 59)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
 atlas = ExtResource("2_cvnsp")
@@ -291,7 +291,7 @@ collision_mask = 9
 script = ExtResource("1_cvnsp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -1.5)
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_cvnsp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
