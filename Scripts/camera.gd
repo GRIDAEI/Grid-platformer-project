@@ -5,7 +5,6 @@ extends Camera2D
 @export var speed: float = 1.0
 var vel
 
-
 func _ready() -> void:
 	var temp = BoundingPoint1.min(BoundingPoint2)
 	BoundingPoint2 = BoundingPoint1.max(BoundingPoint2)

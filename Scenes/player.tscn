@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bn87y6meneoe4" path="res://Assets/Sprites/player/Jump/player jump left 48x48-sheet.png" id="3_fkybt"]
 [ext_resource type="Texture2D" uid="uid://devbkqmdprc35" path="res://Assets/Sprites/player/Walk/PlayerWalk 48x48.png" id="4_vgqql"]
 [ext_resource type="Texture2D" uid="uid://c3xrsgui4y0wr" path="res://Assets/Sprites/player/player wall slide (left) 48x48.png" id="6_x3wgy"]
-[ext_resource type="Script" uid="uid://dubo02b4tjrlr" path="res://Scripts/Player/currency_collector.gd" id="7_3smsa"]
+[ext_resource type="Script" uid="uid://c0w5ra43bx34i" path="res://Scripts/Player/currency_collector.gd" id="7_3smsa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
 size = Vector2(24, 59)
@@ -283,11 +283,11 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8erm5"]
-radius = 33.01515
+radius = 30.594116
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
-collision_layer = 2
-collision_mask = 9
+collision_layer = 130
+collision_mask = 141
 script = ExtResource("1_cvnsp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
