@@ -1,10 +1,13 @@
-[gd_scene load_steps=18 format=4 uid="uid://br2whanyoja5c"]
+[gd_scene load_steps=15 format=4 uid="uid://br2whanyoja5c"]
 
 [ext_resource type="PackedScene" uid="uid://nlmxldaeh4ft" path="res://Scenes/player.tscn" id="1_5cjrv"]
 [ext_resource type="PackedScene" uid="uid://b62pvxyuww225" path="res://Scenes/Menu/menu.tscn" id="2_j0p05"]
 [ext_resource type="Texture2D" uid="uid://csjdn5401fu8d" path="res://Assets/Sprites/Central City - Anokolisa/Assets/Tiles.png" id="3_5nsto"]
 [ext_resource type="Texture2D" uid="uid://bbot1j54hjcep" path="res://Assets/Sprites/Central City - Anokolisa/Assets/Props-01.png" id="3_p70al"]
 [ext_resource type="Texture2D" uid="uid://dixlr18vcsycm" path="res://Assets/Sprites/Central City - Anokolisa/Assets/Buildings.png" id="4_45d1s"]
+[ext_resource type="Script" uid="uid://clo56ek8ev6um" path="res://Scenes/Checkpoints/deathzone.gd" id="6_45d1s"]
+[ext_resource type="Script" uid="uid://dgvtatpc21x42" path="res://Scenes/Checkpoints/checkpoint_manager.gd" id="7_y7y61"]
+[ext_resource type="PackedScene" uid="uid://cudqacfhq0wq3" path="res://Scenes/Checkpoints/checkpoint.tscn" id="8_q2d71"]
 [ext_resource type="Script" uid="uid://f64o8qyq7t0x" path="res://scripts/camera.gd" id="5_45d1s"]
 [ext_resource type="Script" uid="uid://bfkgorsy600qb" path="res://scripts/managers/currency_counter.gd" id="6_uo7di"]
 [ext_resource type="Texture2D" uid="uid://cedspgqa4qh7" path="res://Assets/Sprites/items/currency.png" id="7_kn06e"]
@@ -614,5 +617,20 @@ position = Vector2(2136, -62)
 [node name="Currency9" parent="Currency" instance=ExtResource("10_kn06e")]
 position = Vector2(3160, 68)
 
+[node name="Menu" parent="Camera2D" instance=ExtResource("2_j0p05")]
+
+[node name="Deathzone" type="Area2D" parent="." groups=["Player"]]
+script = ExtResource("6_45d1s")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Deathzone"]
+polygon = PackedVector2Array(-577, -328, 573, -327, 575, 320, -579, 323, -579, -360, -604, 351, 592, 347, 595, -371, -571, -352)
+
+[node name="CheckpointManager" type="Node" parent="."]
+script = ExtResource("7_y7y61")
+
+[node name="Checkpoint" parent="CheckpointManager" instance=ExtResource("8_q2d71")]
+position = Vector2(-218, -236)
+
+[connection signal="body_entered" from="Deathzone" to="Deathzone" method="_on_body_entered"]
 [node name="Currency10" parent="Currency" instance=ExtResource("10_kn06e")]
 position = Vector2(256, 225)
