@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://8qofmgr4rw2e"]
+
+[ext_resource type="Script" uid="uid://bl825eh8am8" path="res://scripts/items/currency.gd" id="1_x5nn1"]
+[ext_resource type="Texture2D" uid="uid://cedspgqa4qh7" path="res://Assets/Sprites/items/currency.png" id="2_x5nn1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8w8sd"]
+radius = 9.0
+
+[node name="Currency" type="Area2D" groups=["currency"]]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_x5nn1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8w8sd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_x5nn1")
+
+[node name="Sfx" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="finished" from="Sfx" to="." method="_on_sfx_finished"]
