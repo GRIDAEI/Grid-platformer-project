@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=4 uid="uid://bpvoy2yqtr6k3"]
 
 [ext_resource type="Texture2D" uid="uid://csjdn5401fu8d" path="res://Assets/Sprites/Central City - Anokolisa/Assets/Tiles.png" id="1_qek6e"]
-[ext_resource type="Script" uid="uid://f64o8qyq7t0x" path="res://scripts/camera.gd" id="4_s5b24"]
+[ext_resource type="Script" uid="uid://f64o8qyq7t0x" path="res://Scripts/camera.gd" id="4_s5b24"]
 [ext_resource type="PackedScene" uid="uid://b62pvxyuww225" path="res://Scenes/Menu/menu.tscn" id="5_sskdo"]
 [ext_resource type="PackedScene" uid="uid://bmeoge1sefvkl" path="res://Scenes/jumppad.tscn" id="6_041ro"]
 [ext_resource type="PackedScene" uid="uid://nlmxldaeh4ft" path="res://Scenes/player.tscn" id="7_n8oda"]
@@ -145,5 +145,5 @@ speed = 3.0
 position = Vector2(2289, 186)
 strength = -900
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("7_n8oda")]
+[node name="Player" parent="." instance=ExtResource("7_n8oda")]
 position = Vector2(-279, -152)
