@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmjbn1o1clm48"]
+
+[ext_resource type="Script" uid="uid://c0neu1gnqhqgh" path="res://Scripts/level_transition.gd" id="1_ptxqw"]
+[ext_resource type="Texture2D" uid="uid://qra43guhhvgy" path="res://Assets/Sprites/level_objects/level_change.png" id="2_m4dfr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ptxqw"]
+size = Vector2(40, 44)
+
+[node name="LevelTransition" type="Node2D"]
+script = ExtResource("1_ptxqw")
+
+[node name="level_transition_sprite" type="Sprite2D" parent="."]
+position = Vector2(-9.094947e-13, 5.9604645e-08)
+scale = Vector2(0.08695652, 0.0778761)
+texture = ExtResource("2_m4dfr")
+
+[node name="level_transition_area" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="level_transition_area"]
+shape = SubResource("RectangleShape2D_ptxqw")
+
+[connection signal="body_entered" from="level_transition_area" to="." method="_on_level_transition_area_body_entered"]

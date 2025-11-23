@@ -75,7 +75,13 @@ var last_dir : float = 0.0
 var last_wall
 
 
+@onready var currency_collector = $CurrencyCollector
+func _ready() -> void:
+	GameManager.player = self
+	
 func _physics_process(delta: float) -> void:
+	if !GameManager.player:
+		GameManager.player = self
 	#Pobierz input
 	input_dir = Input.get_axis("left", "right")
 	

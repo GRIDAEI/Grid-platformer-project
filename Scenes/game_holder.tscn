@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://dawlrkoxplt67"]
+
+[ext_resource type="Script" uid="uid://qo2sdhgu3met" path="res://Scripts/game_holder.gd" id="1_04i3o"]
+[ext_resource type="PackedScene" uid="uid://d3153evxoe0jw" path="res://Scenes/levels/level_2.tscn" id="2_lht8a"]
+[ext_resource type="Texture2D" uid="uid://ss3d13r23q1y" path="res://Assets/Sprites/ui/level_change.png" id="3_m58g4"]
+[ext_resource type="PackedScene" uid="uid://bnh0g5cf8ls21" path="res://Scenes/Menu/CurrencyUI.tscn" id="4_lht8a"]
+
+[node name="GameHolder" type="Node"]
+script = ExtResource("1_04i3o")
+
+[node name="CurrentScene" type="Node" parent="."]
+
+[node name="Level2" parent="CurrentScene" instance=ExtResource("2_lht8a")]
+
+[node name="CurrencyCollected" type="Node" parent="."]
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="CurrencyUi" parent="UILayer" instance=ExtResource("4_lht8a")]
+
+[node name="CheckpointManager" type="Node" parent="."]
+
+[node name="LevelTransitionLayer" type="CanvasLayer" parent="."]
+layer = 4
+visible = false
+
+[node name="LevelTransition" type="Control" parent="LevelTransitionLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="LevelTransitionLayer/LevelTransition"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_m58g4")

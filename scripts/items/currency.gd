@@ -2,7 +2,7 @@ extends Area2D
 
 
 func _ready() -> void:
-	var collector = get_node("/root/TestLevel/Player/CurrencyCollector")
+	var collector = GameManager.player.currency_collector
 	collector.currency_collected.connect(_on_being_collected)
 
 # Po byciu zebranym przez gracza znika kolizja i sprite, ale odpala się timer,
